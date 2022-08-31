@@ -19,6 +19,14 @@ public class SchoolMainRunner {
     public static void main(String[] args) {
 
         Database.courseList.forEach(System.out::println);
+        System.out.println("--------------------------");
+        Database.parentList.forEach(System.out::println);
+        System.out.println("--------------------------");
+        Database.schoolList.forEach(System.out::println);
+        System.out.println("--------------------------");
+        Database.teacherList.forEach(System.out::println);
+        System.out.println("--------------------------");
+        Database.schoolList.forEach(System.out::println);
 
     }
 
