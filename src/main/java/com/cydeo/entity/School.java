@@ -21,4 +21,10 @@ public class School extends BaseEntity {
         this.students = students;
         this.courses = courses;
     }
+
+
+
+
+
+
 }
