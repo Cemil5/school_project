@@ -7,6 +7,10 @@ import com.cydeo.service.CRUDService;
 import com.cydeo.service.StudentService;
 
 import java.util.List;
+import java.util.NoSuchElementException;
+
+import static com.cydeo.database.Database.courseList;
+import static com.cydeo.database.Database.parentList;
 
 public class SchoolMainRunner{
 
@@ -20,19 +24,24 @@ public class SchoolMainRunner{
 //        SchoolMainRunner.courseService = new CourseService();
 //        SchoolMainRunner.parentService = new ParentService();
         SchoolMainRunner.studentService = new StudentService();
- //   System.out.println(studentService.findById(1));
- //   System.out.println(studentService.findAll());
-        studentService.save(new Student(123451L, "Yasin", "Royesh", new Parent(3,"Reza", "Mo","6548655656"), Database.courseList) );
+
+
+
 
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)  {
 
-//        Student student3 = new Student();
-//        System.out.println( student3.getLastName());
+      //System.out.println(studentService.findAll());
 
-//        Database.courseList.forEach(System.out::println);
+//        System.out.println(studentService.findById(5));
+
+      studentService.save(new Student(3,12345L, "Ali", "Roiesh", parentList.get(0), courseList));
+        studentService.update(new Student(3, 423443L, "Hamid", "Karimi", parentList.get(1), courseList));
+        studentService.deleteById(2);
         Database.studentList.forEach(System.out::println);
+
+
 
 
     }
