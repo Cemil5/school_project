@@ -1,13 +1,10 @@
 package com.cydeo.service;
-
 import com.cydeo.database.Database;
 import com.cydeo.entity.Parent;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 import java.util.stream.Collectors;
-
 import static com.cydeo.database.Database.parentList;
 import static com.cydeo.database.Database.schoolList;
 
