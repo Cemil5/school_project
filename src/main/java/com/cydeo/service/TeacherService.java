@@ -27,7 +27,13 @@ public class TeacherService implements CRUDService<Teacher>{
 
     @Override
     public void update(Teacher teacher) {
+ /*  for (int i = 0; i < Database.teacherList.size(); i++) {
+            if (Database.teacherList.get(i).getId() == teacher.getId()) {
+                Database.teacherList.set(i, course);
 
+
+            }
+        }*/
     }
 
     @Override
