@@ -13,6 +13,7 @@ public class Database {
             new Course(1,"English", 40, List.of(WeekDays.MONDAY, WeekDays.THURSDAY)),
             new Course(2,"Math",50, List.of(WeekDays.values())),
             new Course(3,"Java",80, List.of(WeekDays.WEDNESDAY))
+
     ));
 
     public static List<Parent> parentList = new ArrayList<>(List.of(
