@@ -13,6 +13,7 @@ public class Database {
             new Course(1,"English", 40, List.of(WeekDays.MONDAY, WeekDays.THURSDAY)),
             new Course(2,"Math",50, List.of(WeekDays.values())),
             new Course(3,"Java",80, List.of(WeekDays.WEDNESDAY))
+
     ));
 
     public static List<Parent> parentList = new ArrayList<>(List.of(
@@ -23,6 +24,8 @@ public class Database {
     public static List<Student> studentList = new ArrayList<>(List.of(
             new Student(1,12345L, "Jayne", "Smith", parentList.get(0), courseList ),
             new Student(2, 12346L, "Candy", "Brown", parentList.get(1),courseList )
+
+
     ));
 
     public static List<Teacher> teacherList  = new ArrayList<>(List.of(
