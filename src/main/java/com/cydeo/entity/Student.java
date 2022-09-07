@@ -3,12 +3,14 @@ package com.cydeo.entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Student  extends BaseEntity{
 
     private Long studentNumber;
@@ -25,4 +27,8 @@ public class Student  extends BaseEntity{
         this.parent = parent;
         this.courses = courses;
     }
+
+
+
+
 }

@@ -24,6 +24,8 @@ public class Database {
     public static List<Student> studentList = new ArrayList<>(List.of(
             new Student(1,12345L, "Jayne", "Smith", parentList.get(0), courseList ),
             new Student(2, 12346L, "Candy", "Brown", parentList.get(1),courseList )
+
+
     ));
 
     public static List<Teacher> teacherList  = new ArrayList<>(List.of(
