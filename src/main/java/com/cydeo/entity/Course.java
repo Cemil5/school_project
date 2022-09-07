@@ -22,4 +22,7 @@ public class Course extends BaseEntity{
         this.minScore = minScore;
         this.courseDays = courseDays;
     }
+
+
+
 }
