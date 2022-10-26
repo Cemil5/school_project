@@ -2,7 +2,7 @@ package phonebook;
 
 class Node {
 
-    private Contact contact;
+    Contact contact;
     Node next;
 
     Node(Contact contact){
