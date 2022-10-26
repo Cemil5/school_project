@@ -6,12 +6,15 @@ import java.util.NoSuchElementException;
 public class PhoneBookTest {
     public static void main(String[] args) {
         PhoneBook phoneBook = new PhoneBook();
-        phoneBook.add("FakeName", "FakeLastName", "abc1@cydeo.com", 1234567890);
+//        phoneBook.add("FakeName", "FakeLastName", "abc1@cydeo.com", 1234567890);
         phoneBook.add("Burulai", "Abdrakhmanova", "burulai@cydeo.com", 1234567890);
         phoneBook.add("Dilara", "Aslandogan", "dilara@cydeo.com", 1234567890);
         phoneBook.add("FakeName", "FakeLastName", "abc2@cydeo.com", 1234567890);
         phoneBook.add("FakeName", "FakeLastName", "abc3@cydeo.com", 1234567890);
+        phoneBook.add("FakeName", "FakeLastName", "abc3@cydeo.com", 1234567890);
         phoneBook.add("Khashayar", "Shayesteh", "abc@cydeo.com", 1234567890);
+        phoneBook.add("FakeName", "FakeLastName", "abc3@cydeo.com", 1234567890);
+        phoneBook.add("FakeName", "FakeLastName", "abc3@cydeo.com", 1234567890);
         phoneBook.add("Abc", "AbcLastName", "abc@cydeo.com", 1234567890);
         phoneBook.add("Madiyar", "Damen", "madiyar@cydeo.com", 1234567890);
         phoneBook.add("Muhammet", "Sengez", "muhammet@cydeo.com", 1234567890);
@@ -21,21 +24,21 @@ public class PhoneBookTest {
         phoneBook.add("Zhibek", "Toktogulova", "zhibek@cydeo.com", 1234567890);
         phoneBook.add("FakeName", "FakeLastName", "abc4@cydeo.com", 1234567890);
 
-        System.out.println(" ***** Print all records*****");
-        phoneBook.printPhoneBook();
-
-        System.out.println("***** Find the first record of which first name is Abc *****");
-        try {
-            System.out.println(phoneBook.findByFirstName("Abc"));
-        } catch (NoSuchElementException n){
-            System.err.println(n.getMessage());
-        }
-        System.out.println("***** Find the all records of which last name is FakeLastName*****");
-        phoneBook.findAllByLastName("FakeLastName").forEach(System.out::println);
-
-//        System.out.println("***** Delete the first occurrence of which first name is FakeName*****");
-//        phoneBook.deleteByFirstName("FakeName");
+//        System.out.println(" ***** Print all records*****");
 //        phoneBook.printPhoneBook();
+//
+//        System.out.println("***** Find the first record of which first name is Abc *****");
+//        try {
+//            System.out.println(phoneBook.findByFirstName("Abc"));
+//        } catch (NoSuchElementException n){
+//            System.err.println(n.getMessage());
+//        }
+//        System.out.println("***** Find the all records of which last name is FakeLastName*****");
+//        phoneBook.findAllByLastName("FakeLastName").forEach(System.out::println);
+
+        System.out.println("***** Delete the first occurrence of which first name is FakeName*****");
+        phoneBook.deleteByFirstName("FakeName");
+        phoneBook.printPhoneBook();
 //
 //        System.out.println("***** Delete the all records of which last name is FakeLastName*****");
 //        phoneBook.deleteAllMatchingLastName("FakeLastName");

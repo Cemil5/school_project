@@ -74,23 +74,46 @@ public class PhoneBook {
         while (current != null) {
             if (current.contact.getLastName().equals(lastName)) {
                 contactList.add(current.contact);
-
             }
-
-
             current = current.next;
 
         }
         if (contactList.size() == 0)
-            throw new NoSuchElementException("This contact dosn't exist! ");
+            throw new NoSuchElementException("This contact doesn't exist! ");
         return contactList;
-
     }
-
 
     public void deleteByFirstName(String firstName) {
+        if (isEmpty()) {
+            System.out.println("list is empty");
+            return;
+        }
+        Node current = head;
+        Node prev = head;
+        while (current != null) {
+            if (current.contact.getFirstName().equals(firstName)) {
+                if (current == head) {
+                    head = current.next;
+                    current.next = null;
+
+                } else if (current == tail) {
+                    tail = prev;
+                    prev.next = null;
+
+                } else {
+                    prev.next=current.next;
+                    current.next=null;
+
+                }
+                size--;
+            }
+            prev = current;
+            current = current.next;
+
+        }
 
     }
+
 
     public void deleteAllMatchingLastName(String lastName) {
 
