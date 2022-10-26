@@ -1,6 +1,8 @@
 package phonebook;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PhoneBook {
 
@@ -23,9 +25,9 @@ public class PhoneBook {
         if (head == null) {
             head = node;
             tail = node;
-        }else {
-            tail.next=node;
-            tail=node;
+        } else {
+            tail.next = node;
+            tail = node;
 
         }
         size++;
@@ -33,26 +35,58 @@ public class PhoneBook {
 
     public void printPhoneBook() {
 
-        if (head==null){
+        if (head == null) {
             System.out.println("Phonebook is empty");
         }
 
-        Node current=head;
-        while (current!=null){
+        Node current = head;
+        while (current != null) {
             System.out.println(current.contact);
-            current=current.next;
+            current = current.next;
         }
 
 
     }
 
     public Contact findByFirstName(String firstName) {
-        return null;
+        if (head == null) {
+            System.out.println("Phonebook is empty");
+        }
+
+        Node current = head;
+        while (current != null) {
+            if (current.contact.getFirstName().equals(firstName)) {
+                return current.contact;
+            }
+
+            current = current.next;
+        }
+        throw new NoSuchElementException("This firstname dosn't exist! ");
     }
 
     public List<Contact> findAllByLastName(String lastName) {
-        return null;
+        if (head == null) {
+            System.out.println("Phonebook is empty");
+        }
+
+        Node current = head;
+        List<Contact> contactList = new ArrayList<>();
+        while (current != null) {
+            if (current.contact.getLastName().equals(lastName)) {
+                contactList.add(current.contact);
+
+            }
+
+
+            current = current.next;
+
+        }
+        if (contactList.size() == 0)
+            throw new NoSuchElementException("This contact dosn't exist! ");
+        return contactList;
+
     }
+
 
     public void deleteByFirstName(String firstName) {
 

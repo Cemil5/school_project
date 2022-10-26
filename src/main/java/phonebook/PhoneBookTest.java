@@ -1,6 +1,7 @@
 package phonebook;
 
 import java.util.List;
+import java.util.NoSuchElementException;
 
 public class PhoneBookTest {
     public static void main(String[] args) {
@@ -24,10 +25,13 @@ public class PhoneBookTest {
         phoneBook.printPhoneBook();
 
         System.out.println("***** Find the first record of which first name is Abc *****");
-        System.out.println(phoneBook.findByFirstName("Abc"));
-
-//        System.out.println("***** Find the all records of which last name is FakeLastName*****");
-//        phoneBook.findAllByLastName("FakeLastName").forEach(System.out::println);
+        try {
+            System.out.println(phoneBook.findByFirstName("Abc"));
+        } catch (NoSuchElementException n){
+            System.err.println(n.getMessage());
+        }
+        System.out.println("***** Find the all records of which last name is FakeLastName*****");
+        phoneBook.findAllByLastName("FakeLastName").forEach(System.out::println);
 
 //        System.out.println("***** Delete the first occurrence of which first name is FakeName*****");
 //        phoneBook.deleteByFirstName("FakeName");
